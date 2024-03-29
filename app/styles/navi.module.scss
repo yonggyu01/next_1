@@ -1,0 +1,12 @@
+.navi{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    a{
+        font{
+            size:2em;
+            weight : bold;
+        }
+    }
+}
