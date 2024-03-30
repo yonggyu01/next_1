@@ -1,12 +1,83 @@
+@import './media.scss';
+
 .navi{
+    position: relative;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 20px;
+    align-items: center;
+    height: 4em;
+    width: 90vw;
+
     a{
-        font{
-            size:2em;
-            weight : bold;
+        font-size:2em;
+        font-weight : bold;
         }
-    }
 }
+.navi>a:first-child{
+    position: absolute;
+    left:15%;
+
+}
+.buger {
+    // display: none;
+}
+
+
+@include tablet {
+    .navi{
+        a{
+           &:not(:first-child){
+               display: none;
+           }
+        }
+      }
+      .buger{
+        display: block;
+        a{
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          align-items: center;
+          gap:1px;
+          justify-content: center;
+          span{
+              display: inline-block;
+              width: 20px;
+              border-bottom: 2px solid black; 
+              height: 3px;
+              margin-bottom: 3px;
+          }
+      }
+       }
+}
+
+@include mobile {
+    .navi{
+      a{
+         font-size:1em;
+         &:not(:first-child){
+             display: none;
+         }
+      }
+    }
+    .buger{
+     display: block;
+     a{
+         display: flex;
+     flex-direction: column;
+     width: 15px;
+     gap:1px;
+     align-items: center;
+     justify-content: center;
+         span{
+             display: inline-block;
+             width: 15px;
+             border-bottom: 2px solid black; 
+             height: 2px;
+             margin-bottom: 2px;
+         }
+     }
+    }
+ }

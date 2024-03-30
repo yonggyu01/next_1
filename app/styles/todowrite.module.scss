@@ -1,0 +1,21 @@
+.set{
+    margin-top: 30px;;
+    position: relative;
+    display: flex;
+    gap:10px;
+    legend{
+        margin: -1px;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+
+    }
+    button{
+        color:black;
+        background-color: white;
+        width: 60px;
+        border-radius: 8px;;
+    }
+    
+
+}

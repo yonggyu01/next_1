@@ -1,0 +1,21 @@
+$break-mobile: 400px;
+$break-tablet: 650px;
+$break-desktop: 900px;
+
+@mixin mobile {
+    @media (max-width: #{$break-mobile})  {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (max-width: #{$break-tablet}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$break-desktop}) {
+      @content;
+    }
+  }

@@ -11,8 +11,13 @@ export const Naviga:React.FC = ()=>{
             <Link href={item.href} key={'link'+item.href}>
                 {item.label}
             </Link>))}
-
-       
+            <div className={style.buger}>
+            <Link href="" className={style.link}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </Link>
+            </div>
         </nav>
     )
 }

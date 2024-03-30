@@ -1,0 +1,54 @@
+@import './media.scss';
+
+@mixin flex(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+
+}
+.mainbg{
+    background-color: black;
+    height: calc(100vh - 4em)
+
+}
+.main{
+    @include flex();
+    width: 80vw;
+    margin : 0 auto;
+
+}
+.title{
+    h2{
+        color : white;
+        font-size: 4em;
+        &:nth-child(2){
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+    }
+    p{
+        color : white;
+    }
+}
+
+@include tablet{
+    .title{
+        h2{
+            font-size : 3em;
+        }
+    }
+}
+
+@include mobile {
+    .main{
+        display: block;
+
+    }
+    .title{
+        h2{
+            font-size : 1.5em;
+        }
+    }
+}
