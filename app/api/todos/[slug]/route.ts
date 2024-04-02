@@ -14,7 +14,7 @@ export async function GET (req : NextRequest, { params }: { params: { slug: stri
   }
 
 
-  export async function post (req : NextRequest)  {
+  export async function POST (req : NextRequest)  {
     const {title,id} = await req.json()
     const response = {
       msg : 'succ',
