@@ -15,7 +15,7 @@ export const Todolist:React.FC =()=>{
  const [is_modal , setis_modal] = React.useState<boolean>(false)
   // 모달창 띄우는 함수
 useEffect(()=>{
-  console.log(TodoList, 're',React.use(GET()))
+  // console.log(TodoList, 're',React.use(GET()))
 },[is_modal])
   function addclick():void{
   setis_modal(!is_modal)
