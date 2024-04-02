@@ -20,6 +20,9 @@ $border_white :1px solid #ffff;
         color : white;
     }
     .table{
+    position: relative;
+    top:30px;
+
         border: $border_white;
         border-collapse: collapse;
         margin-top: 30px;
@@ -27,7 +30,7 @@ $border_white :1px solid #ffff;
     .td{
         color:white;
         border: $border_white;
-        padding: 0 10px;
+        padding:  10px;
         &:nth-child(3){
             width: 40vw;
             white-space: nowrap;
@@ -51,4 +54,21 @@ $border_white :1px solid #ffff;
      
         }
     }
+}
+.add{
+    color: red;
+    margin-right: 5px;
+}
+.addtext{
+    color:white;
+    cursor: pointer;
+}
+.addtitle{
+    position: fixed;
+    top:100px;
+    left:18%;
+    text-align: left;
+}
+.displaynone{
+    display: none;
 }

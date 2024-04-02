@@ -1,7 +1,25 @@
-.set{
-    margin-top: 30px;;
-    position: relative;
+.modal1{
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    background-color: #75757560;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.set{
+    margin:0 auto;
+    width: 40vw;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
     gap:10px;
     legend{
         margin: -1px;
@@ -11,11 +29,17 @@
 
     }
     button{
+        position: relative;
+        left:90%;
         color:black;
-        background-color: white;
+        right:0;
+        background-color: rgb(253, 132, 132);
         width: 60px;
         border-radius: 8px;;
     }
     
 
+}
+.displaynone{
+    display: none;
 }
