@@ -48,7 +48,7 @@ useEffect(()=>{
             
           
               <tbody className="">
-                {list.todo&& list.todo.map((item:Todotype)=><tr>
+                {list.todo&& list.todo.map((item:Todotype)=><tr key={item.create}>
                 <td className={todo.td}> {item.isdone? "완료" : "미완료"}</td>
                 <td className={todo.td}>{item.create}</td>
                 <td className={todo.td}>{item.content}</td>
