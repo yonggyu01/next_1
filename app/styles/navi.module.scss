@@ -10,7 +10,7 @@
     height: 4em;
     width: 90vw;
 
-    a{
+    .href{
         font-size:2em;
         font-weight : bold;
         }
@@ -27,7 +27,7 @@
 
 @include tablet {
     .navi{
-        a{
+        .href{
            &:not(:first-child){
                display: none;
            }
@@ -55,7 +55,7 @@
 
 @include mobile {
     .navi{
-      a{
+        .href{
          font-size:1em;
          &:not(:first-child){
              display: none;

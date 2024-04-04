@@ -9,16 +9,12 @@ export const siteConfig = {
 			href: "/",
 		},
         {
-            label : "todos",
+            label : "Redux_Todo",
             href: "/todos"
         },
         {
-            label : "skills",
-            href: "/skills"
-        },
-        {
-            label : "Projects",
-            href: "/projects"
+            label : "DB_Todo",
+            href: "/DB_todos"
         }
     
     ]
