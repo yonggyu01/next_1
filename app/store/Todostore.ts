@@ -7,7 +7,7 @@ const initialState = {
     isdone : false,
     create : "11시",
     content : '더미데이터야',
-    id : 0
+    id : 'dd'
     }] as Todotype[]
 }
     
