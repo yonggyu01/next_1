@@ -126,7 +126,7 @@ async function deldata(id:string){
              
                    </td>
                 <td className={todo.td}>{item.create}</td>
-                <td className={`${todo.td} ${item.isdone? todo.loading: ''}`} >{item.content}</td>
+                <td className={`${todo.td} ${item.isdone? todo.linego: ''}`} >{item.content}</td>
            
                 <td className={todo.edit}>
                   <button onClick={()=>{
