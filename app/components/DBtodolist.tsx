@@ -56,6 +56,20 @@ async function updatedata(array:Todotype){
     console.log('server')
   }
 }
+//완료 비완료 수정
+
+async function updateisdone(array:Todotype){
+  try{
+    array.isdone = !array.isdone
+    const post:AxiosResponse = await axios.post(`/api/todos/update`,array)
+    const result = post.data
+    setrender(true)
+  }
+  catch(err){
+    console.log('server')
+  }
+}
+
 // 삭제
 async function deldata(id:string){
   try{
@@ -89,7 +103,7 @@ async function deldata(id:string){
             <span className={todo.addtext} onClick={addclick}>추가하기</span> 
           </div>
             <table className={todo.table}>
-              {list.length < 1 ? null :  <thead>
+              {list.length < 1 ? <h1>Loading...</h1> :  <thead>
                 <tr>
                   <th className={todo.hp}>완료</th>
                   <th className={todo.hp}>등록일</th>
@@ -105,7 +119,12 @@ async function deldata(id:string){
           
               <tbody className="">
                 {list&& list.map((item:Todotype,idx:number)=><tr key={item.create+idx}>
-                <td className={todo.td}> {item.isdone? "완료" : "미완료"}</td>
+                <td className={todo.td} onClick={()=>{
+                    updateisdone(item)
+                  }}>                 
+                   {item.isdone? "완료" : "미완료"}
+             
+                   </td>
                 <td className={todo.td}>{item.create}</td>
                 <td className={todo.td}>{item.content}</td>
            
@@ -128,7 +147,7 @@ async function deldata(id:string){
               
     
             </table>
-                  {!list && <h1>Loading...</h1>}
+               
           </div>
       </div>
     )
