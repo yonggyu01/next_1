@@ -103,7 +103,7 @@ async function deldata(id:string){
             <span className={todo.addtext} onClick={addclick}>추가하기</span> 
           </div>
             <table className={todo.table}>
-              {list.length < 1 ? <h1>Loading...</h1> :  <thead>
+              {list.length < 1 ? <h1 className={todo.loading}>Loading...</h1> :  <thead>
                 <tr>
                   <th className={todo.hp}>완료</th>
                   <th className={todo.hp}>등록일</th>
@@ -121,12 +121,12 @@ async function deldata(id:string){
                 {list&& list.map((item:Todotype,idx:number)=><tr key={item.create+idx}>
                 <td className={todo.td} onClick={()=>{
                     updateisdone(item)
-                  }}>                 
+                  }} style={{cursor:"pointer"}}>                 
                    {item.isdone? "완료" : "미완료"}
              
                    </td>
                 <td className={todo.td}>{item.create}</td>
-                <td className={todo.td}>{item.content}</td>
+                <td className={`${todo.td} ${item.isdone? todo.loading: ''}`} >{item.content}</td>
            
                 <td className={todo.edit}>
                   <button onClick={()=>{
