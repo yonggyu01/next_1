@@ -8,7 +8,7 @@ import { useAppDispatch,useAppSelector } from '../store/hook';
 import { RootState } from '../store/store';
 import {Todotype,addpost} from '../model/mytype'
 import axios, { AxiosResponse } from 'axios';
-
+import Loading from '../DB_todos/loading';
 
 
 
@@ -103,7 +103,7 @@ async function deldata(id:string){
             <span className={todo.addtext} onClick={addclick}>추가하기</span> 
           </div>
             <table className={todo.table}>
-              {list.length < 1 ? <h1 className={todo.loading}>Loading...</h1> :  <thead>
+              {list.length < 1 ? <Loading/> :  <thead>
                 <tr>
                   <th className={todo.hp}>완료</th>
                   <th className={todo.hp}>등록일</th>
