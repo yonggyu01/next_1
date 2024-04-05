@@ -128,7 +128,7 @@ async function deldata(id:string){
               
     
             </table>
-      
+                  {!list && <h1>Loading...</h1>}
           </div>
       </div>
     )
